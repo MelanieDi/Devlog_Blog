@@ -1,0 +1,1 @@
+SELECT Articles.*, Author.Pseudo FROM `Articles` INNER JOIN Author ON Author.ID = Articles.Author_ID LIMIT 10

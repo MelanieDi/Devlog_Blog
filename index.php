@@ -1,10 +1,18 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 //Index = Rooter
 $routes = [
     'home' => "ressources/views/home.php",
     'contact' => "ressources/views/contact.php",
     'playlist' => "ressources/views/playlist.php",
     '/' => "app/controllers/homeController.php", // FrontController permet d'appeler la page homecontroller
+    'blogpost' => "app/controllers/blogPostController.php",
+    'delete'=> "app/controllers/blogPostDeleteController.php",
+    'create'=> "app/controllers/blogPostCreateController.php",
+    'update'=> "app/controllers/blogPostModifyController.php",
+
     // ajoutez d'autres routes ici
 ];
 $page = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_URL);
